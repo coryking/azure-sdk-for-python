@@ -5,16 +5,16 @@ extends:
     parameters:
       BuildTargetingString: azure-ai-textanalytics
       ServiceDirectory: textanalytics
-      #      CloudConfig:
-      #        Public:
-      #          Location: eastus
-      #          SubscriptionConfigurations:
-      #            - $(sub-config-text-analytics-azure-cloud-test-resources)
-      #          MatrixReplace:
-      #            - TestSamples=.*/true
-      #        UsGov:
-      #        China:
-      #          Location: chinanorth3
+      CloudConfig:
+        Public:
+          Location: eastus
+          SubscriptionConfigurations:
+            - $(sub-config-text-analytics-azure-cloud-test-resources)
+          MatrixReplace:
+            - TestSamples=.*/true
+        UsGov:
+        China:
+          Location: chinanorth3
       SupportedClouds: 'Public,UsGov,China'
       EnvVars:
         TEST_MODE: 'RunLiveNoRecord'
